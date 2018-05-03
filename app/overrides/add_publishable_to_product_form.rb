@@ -1,6 +1,6 @@
 Deface::Override.new(:virtual_path => 'spree/admin/products/_form',
                                           :name => 'marks_publishable_checkbox',
-                                          :insert_after => "erb[loud]:contains('field_container :promotionable')",
+                                          :insert_after => "div[data-hook=admin_product_form_promotionable]",
                                           :text => "
                                                             <div data-hook='admin_product_form_publishable'>
                                                               <%= f.field_container :publishable, class: ['form-group'] do %>
