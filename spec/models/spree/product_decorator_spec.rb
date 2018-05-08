@@ -8,7 +8,6 @@ describe Spree::Product, type: :model do
 
     it "returns the published product" do
       expect(Spree::Product.published).to include(published_product)
-      puts Spree::Product.all.inspect
     end
 
     it "does not return unpublished_product" do

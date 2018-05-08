@@ -4,8 +4,10 @@ describe Spree::Taxon, type: :model do
   let(:taxon) {create(:taxon)}
 
   describe "#active_products" do
-    it "returns published products" do
-      expect(taxon.active_products).to be_empty
+    context "when taxon has only unpublished products" do
+      it "returns empty list" do
+        expect(taxon.active_products).to be_empty
+      end
     end
   end
 end
