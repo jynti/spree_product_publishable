@@ -16,6 +16,7 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'rspec/rails'
+require 'factory_bot'
 require 'database_cleaner'
 require 'ffaker'
 
@@ -27,7 +28,7 @@ Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/capybara_ext'
 require 'spree/testing_support/controller_requests'
-require 'spree/testing_support/factories'
+# require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 
 require 'capybara/rspec'
